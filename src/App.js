@@ -1,31 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <div>N5</div>
-      <div>N4</div>
-      <div>N3</div>
-      <div>N2</div>
-      <div>N1</div>
-    </div>
-  );
+class App extends Component{
+  state = {
+    count: 0
+  };
+
+  handleChange = () => {
+    this.setState({
+      count: 'bye app js!'
+    });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <div className="props">
+          <span>{this.props.message}</span>
+        </div>
+        <div className="state">
+          {this.state.count}
+        </div>
+        <button onClick={this.handleChange}>click me!</button>
+        <div>N5</div>
+        <div>N4</div>
+        <div>N3</div>
+        <div>N2</div>
+        <div>N1</div>
+      </div>
+    );
+  }
 }
-
 export default App;
