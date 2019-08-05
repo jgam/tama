@@ -19,6 +19,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>N5</div>
+      <div>N4</div>
+      <div>N3</div>
+      <div>N2</div>
+      <div>N1</div>
     </div>
   );
 }
