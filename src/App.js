@@ -60,7 +60,7 @@ class App extends Component{
     else if(level==4){
 
     }
-    else if(leve==5){
+    else if(level==5){
 
     }
     else{
