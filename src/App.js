@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class App extends Component{
+
   state = {
     count: 0
   };
@@ -33,19 +34,19 @@ class App extends Component{
     //this needs to return states for passing different values
     return(
       <div>
-        <button onClick={() => this.render_view_level()}>N5</button>
-        <div>N4</div>
-        <div>N3</div>
-        <div>N2</div>
-        <div>N1</div>
+        <button onClick={() => this.render_view_level(5)}>N5</button>
+        <button onClick={() => this.render_view_level(4)}>N4</button>
+        <button onClick={() => this.render_view_level(3)}>N3</button>
+        <button onClick={() => this.render_view_level(2)}>N2</button>
+        <button onClick={() => this.render_view_level(1)}>N1</button>
       </div>
     )
 
   }
 
   //here we need props to set the condition
-  render_view_level(){
-    
+  render_view_level(level){
+    console.log(level);
     console.log('hello world');
     return(
       <div>hello world</div>
