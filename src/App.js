@@ -64,7 +64,7 @@ class App extends Component{
 
     }
     else{
-      console.log('error something went wrong');
+      console.log('error something went wrong');//this is error
     }
     return(
       <div>hello world</div>
