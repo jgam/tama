@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import N1 from './json/N1.json';
+import N2 from './json/N2.json';
+import N3 from './json/N3.json';
+import N4 from './json/N4.json';
+import N5 from './json/N5.json';
 
 class App extends Component{
 
@@ -49,7 +54,7 @@ class App extends Component{
     console.log(level);
     console.log('hello world');
     if(level == 1){
-      //this is level1
+      //do the computations of getting the words here
     }
     else if(level==2){
       //lv2
