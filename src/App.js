@@ -48,6 +48,24 @@ class App extends Component{
   render_view_level(level){
     console.log(level);
     console.log('hello world');
+    if(level == 1){
+      //this is level1
+    }
+    else if(level==2){
+      //lv2
+    }
+    else if(level==3){
+
+    }
+    else if(level==4){
+
+    }
+    else if(leve==5){
+
+    }
+    else{
+      console.log('error something went wrong');
+    }
     return(
       <div>hello world</div>
     )
