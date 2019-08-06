@@ -26,8 +26,20 @@ class App extends Component{
         <div>N3</div>
         <div>N2</div>
         <div>N1</div>
+
+        <div className="detail">this is detail now</div>
+
       </div>
     );
+  }
+
+  render_title_page(){
+
+  }
+
+  //here we need props to set the condition
+  render_view_level(){
+
   }
 }
 export default App;
