@@ -8,13 +8,21 @@ import N5 from './json/N5.json';
 class App extends Component{
 
   state = {
-    count: 0
+    count: 0,
+    words: ''
   };
 
-  handleChange = () => {
-    this.setState({
-      count: 'bye app js!'
-    });
+  handleChange = (handle_variable) => {
+    if(!handle_variable){
+      this.setState({
+        count: 'bye js'
+      });
+    }
+    else{
+      this.setState({
+        count: handle_variable
+      });
+    }
   };
   //<!--thi s needs to be changed with different conditions and call different criteria-->
   render() {
@@ -29,7 +37,6 @@ class App extends Component{
         <button onClick={this.handleChange}>click me!</button>
        
         {this.render_title_page()}
-        <div className="detail">this is detail now</div>
 
       </div>
     );
@@ -39,7 +46,7 @@ class App extends Component{
     //this needs to return states for passing different values
     return(
       <div>
-        <button onClick={() => this.render_view_level(5)}>N5</button>
+        <button onClick={() => this.render_view_level(N5)}>N5</button>
         <button onClick={() => this.render_view_level(4)}>N4</button>
         <button onClick={() => this.render_view_level(3)}>N3</button>
         <button onClick={() => this.render_view_level(2)}>N2</button>
@@ -50,29 +57,35 @@ class App extends Component{
   }
 
   //here we need props to set the condition
-  render_view_level(level){
-    console.log(level);
-    console.log('hello world');
-    if(level == 1){
+  render_view_level(current_words){
+    //let admins = require('~//admins.json');
+    /*
+    if(level === 1){
       //do the computations of getting the words here
     }
-    else if(level==2){
+    else if(level ===2){
       //lv2
     }
-    else if(level==3){
+    else if(level===3){
 
     }
-    else if(level==4){
+    else if(level===4){
 
     }
-    else if(level==5){
-
+    else if(level===5){
+      current_words = N5;
     }
     else{
       console.log('error something went wrong');//this is error
     }
+    */
+    console.log("before return");
+    //console.log(current_words[0]);
     return(
-      <div>hello world</div>
+      <div>
+        <div>hello world: current words</div>
+        <div>{current_words}</div>
+      </div>
     )
   }
 }
