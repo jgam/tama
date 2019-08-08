@@ -9,8 +9,9 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      vocab: ''
+      level: ''
     };
+
   }
 
   render() {
@@ -18,7 +19,7 @@ class App extends React.Component{
       <div className="App">
        
         <title>hello</title>
-        <ContentBar levelProps={this.getVocab}/>
+        <ContentBar levelChange={this.state.level}/>
 
         <Vocabularies vocabs={this.props.vocab}/>
         
