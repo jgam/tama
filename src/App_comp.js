@@ -10,21 +10,27 @@ class ContentBar extends React.Component{
     //because the user doesn't activate the fetching vocabularies.
 
     constructor(props) {
-        super(props);
+        super(props);//App's props = this.props
         this.handleChange = this.handleChange.bind(this);
+        console.log('constructor!!', props);
 
         
     }
 
-    handleCHange(e) {
-        this.props.onChange(e.target.value);
+    handleChange(e) {
+        console.log(this.props);
+        this.state.levelChange=e.target.value;
+    }
+
+    levelChange() {
+        alert('hhh');
     }
 
 
     render(){
         return(
         <div>
-            <button onClick={this.stateProps('N5')}>N5</button>
+            <button onClick={this.handleChange}>N5</button>
         </div>
       )
     }
