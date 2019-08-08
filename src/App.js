@@ -4,43 +4,36 @@ import ContentBar from './App_comp.js';
 import Vocabularies from './App_Vocab.js';
 import Vocab from './Vocab';
 
-
-class App extends React.Component{
-
-  constructor(props){
+class App extends React.Component {
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       level: ''
     };
-
   }
 
-  handleButton = (something) => {
+  handleButton = input_level => {
     this.setState({
-      level : something
-    })
-  }
-  
+      level: input_level
+    });
+  };
 
   render() {
-    const {level} = this.state;
-    const {handleButton} = this;
+    //const { level } = this.state;
+    //const {handleButton} = this;
 
-    console.log(level);
+    console.log('level is : ', this.state.level);
     return (
       <div className="App">
-       
         <title>hello</title>
         {/*<ContentBar levelChange={this.state.level}/>
 
     <Vocabularies vocabs={this.props.vocab}/>*/}
-    <Vocab level={level} handleButton={handleButton}/>
-        
-
+        {/*level ={level} */}
+        <Vocab level={this.state.level} handleButton={this.handleButton} />
       </div>
     );
   }
 }
-
 
 export default App;
