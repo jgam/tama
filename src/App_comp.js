@@ -8,10 +8,16 @@ import N5 from './json/N5.json';
 class ContentBar extends React.Component{
     //this one is still little blurry
     //because the user doesn't activate the fetching vocabularies.
+    handleChange(ipnut){
+        //this.props.
+        
+        this.props.vocabs = 'N5';
+        console.log('props updated in hc');
+    }
     render(){
         return(
         <div>
-            <button onClick={this.props.levelProps}>N5</button>
+            <button onClick={this.handleChange('N5')}>N5</button>
         </div>
       )
     }
