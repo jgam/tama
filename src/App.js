@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-import N5 from './json/N5.json';
-import ContentBar from './App_comp.js';
-import Vocabularies from './App_Vocab.js';
+import React from 'react';
 import Vocab from './Vocab';
+import Vocab_Display from './Vocab_Display';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,10 +25,10 @@ class App extends React.Component {
       <div className="App">
         <title>hello</title>
         {/*<ContentBar levelChange={this.state.level}/>
-
     <Vocabularies vocabs={this.props.vocab}/>*/}
         {/*level ={level} */}
-        <Vocab level={this.state.level} handleButton={this.handleButton} />
+        <Vocab handleButton={this.handleButton} />
+        <Vocab_Display level={this.state.level} />
       </div>
     );
   }
