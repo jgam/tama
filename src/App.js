@@ -26,7 +26,20 @@ class App extends React.Component {
   render() {
     //const { level } = this.state;
     //const {handleButton} = this;
-    var {current_vocab} = this.state.words;
+    var current_vocab = this.state.words;
+    var actual_vocabs = []
+    var actual_meanings = [];
+    if(current_vocab.length !== 0){
+      console.log('defined : ', current_vocab[0], current_vocab[0].word);
+    }
+    
+    if(current_vocab.length !== 0){
+      for(let i = 0; i < current_vocab.length; i++){
+        //take out property from current vocabs to act_voc + act_means
+        actual_vocabs.push(current_vocab[i].word);
+        actual_meanings.push(current_vocab[i].meaning);
+      }
+    }
 
     console.log('level is : ', this.state.level);
     console.log('word is: ', this.state.words)
@@ -37,8 +50,7 @@ class App extends React.Component {
         <Vocab_Display level={this.state.level} viewButton={this.viewButton}/>
         <div className="vocab">
           the vocabs are:
-          {current_vocab}
-          {JSON.stringify(this.state.words)}
+          {JSON.stringify(actual_vocabs)}
         </div>
       </div>
     );
