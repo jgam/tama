@@ -29,9 +29,6 @@ class App extends React.Component {
     var current_vocab = this.state.words;
     var actual_vocabs = []
     var actual_meanings = [];
-    if(current_vocab.length !== 0){
-      console.log('defined : ', current_vocab[0], current_vocab[0].word);
-    }
     
     if(current_vocab.length !== 0){
       for(let i = 0; i < current_vocab.length; i++){
