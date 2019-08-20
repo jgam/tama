@@ -11,6 +11,18 @@ class Vocabularies extends React.Component{
         if(this.props.levelProps==='N5'){
             vocabs = N5;
         }
+        else if(this.props.levelProps==='N4'){
+            vocabs = N4;
+        }
+        else if(this.props.levelProps==='N3'){
+            vocabs = N3;
+        }
+        else if(this.props.levelProps==='N2'){
+            vocabs = N2;
+        }
+        else{
+            vocabs = N1;
+        }
         return(
             <div>
                 {vocabs}
