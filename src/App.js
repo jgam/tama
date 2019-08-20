@@ -42,19 +42,30 @@ class App extends React.Component {
     console.log('word is: ', this.state.words)
     return (
       <div className="App">
+
+        {/*head started */}
         <head>
           <meta charset="UTF-8"></meta>
           <meta name="author" content="nihongo"></meta>
           <title>nihongo app</title>
         </head>
         
-        
-        <Vocab handleButton={this.handleButton} />
-        <Vocab_Display level={this.state.level} viewButton={this.viewButton}/>
-        <div className="vocab">
-          the vocabs are:
-          {JSON.stringify(actual_vocabs)}
-        </div>
+        {/*body started */}
+        <body>
+          {/*button started */}
+          <div className="Buttons">
+            <Vocab handleButton={this.handleButton} />
+          </div>
+          {/*days started */}        
+          <div className="Days">
+            <Vocab_Display level={this.state.level} viewButton={this.viewButton}/>
+          </div>
+          {/*Vocabs display started */}
+          <div className="Vocabs">
+            the vocabs are:
+            {JSON.stringify(actual_vocabs)}
+          </div>
+        </body>
       </div>
     );
   }
