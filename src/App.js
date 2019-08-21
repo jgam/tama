@@ -47,6 +47,7 @@ class App extends React.Component {
         <head>
           <meta charset="UTF-8"></meta>
           <meta name="author" content="nihongo"></meta>
+          <link rel="stylesheet" type="text/css" href="./src/css/style.css"></link>
           <title>nihongo app</title>
         </head>
         
