@@ -1,6 +1,7 @@
 import React from 'react';
 import Vocab from './Vocab';
 import Vocab_Display from './Vocab_Display';
+import './src/css/App.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -47,7 +48,6 @@ class App extends React.Component {
         <head>
           <meta charset="UTF-8"></meta>
           <meta name="author" content="nihongo"></meta>
-          <link rel="stylesheet" type="text/css" href="./src/css/style.css"></link>
           <title>nihongo app</title>
         </head>
         
