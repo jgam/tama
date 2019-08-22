@@ -1,7 +1,7 @@
 import React from 'react';
 import Vocab from './Vocab';
 import Vocab_Display from './Vocab_Display';
-import './src/css/App.css'
+import './css/App.css'
 
 class App extends React.Component {
   constructor(props) {
